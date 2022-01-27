@@ -165,6 +165,9 @@
         $('#bar6').barfiller({
             barColor:'#01a6e0',
         });
+        $('#bar7').barfiller({
+            barColor:'#01a6e0',
+        });
         // $('.circlechart').circlechart();
 
         $('.container').imagesLoaded(function() {
@@ -199,8 +202,9 @@
 
         $("#mobile-menu").metisMenu();
 
-        $('body').on('click','#contact-us-btn',function(){
+        $('body').on('submit','#contact-form',function(){
             var name = $('#name').val();
+            var email = $('#email').val();
             var message = $('#message').val();
             var error = false;
             
@@ -216,8 +220,13 @@
                 error = true;
             }
 
+            if(email == ''){
+                $('#message').css('border','1px solid #f38484');
+                error = true;
+            }
+
             if(error == false){
-                window.open("mailto:meettalhasharafat@gmail.com&subject=" + name + "&body=" + message, '_blank');
+                window.open("mailto:meettalhasharafat@gmail.com?cc=" + email + "&subject=" + name + "&body=" + message, '_blank');
             }
         });
 

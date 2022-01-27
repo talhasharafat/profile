@@ -2999,12 +2999,14 @@ header.sticky #hamburger {
 
 .single-portfolio-item img {
   width: 100%;
+  height: 100%;
 }
 
 .single-portfolio-item a {
   display: block;
   position: relative;
   text-align: center;
+  height: 180px;
 }
 
 .single-portfolio-item a::before {
@@ -3156,7 +3158,6 @@ header.sticky #hamburger {
 }
 
 .single-progress-bar {
-  overflow: hidden;
   padding-top: 30px;
 }
 
