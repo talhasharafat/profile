@@ -3292,6 +3292,9 @@ header.sticky .main-menu ul li a {
 }
 
 @media (max-width: 500px) {
+  .skills-experiance-resume .programming-skill {
+    padding: 30px 15px;
+  }
   .skills-experiance-resume .design-skills {
     text-align: center;
   }
